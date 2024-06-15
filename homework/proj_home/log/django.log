@@ -1,0 +1,57 @@
+INFO 2024-06-15 17:42:12,147 autoreload Watching for file changes with StatReloader
+INFO 2024-06-15 17:43:29,463 autoreload C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\homework\proj_home\hw_app1\views.py changed, reloading.
+INFO 2024-06-15 17:43:30,470 autoreload Watching for file changes with StatReloader
+INFO 2024-06-15 17:43:35,440 views Index page accessed
+INFO 2024-06-15 17:43:35,478 basehttp "GET / HTTP/1.1" 200 1165
+INFO 2024-06-15 17:44:41,243 autoreload C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\homework\proj_home\hw_app1\views.py changed, reloading.
+INFO 2024-06-15 17:44:42,459 autoreload Watching for file changes with StatReloader
+INFO 2024-06-15 17:44:47,828 views Index page accessed
+INFO 2024-06-15 17:44:47,847 basehttp "GET / HTTP/1.1" 200 1104
+INFO 2024-06-15 17:45:11,465 autoreload C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\homework\proj_home\hw_app1\views.py changed, reloading.
+INFO 2024-06-15 17:45:12,657 autoreload Watching for file changes with StatReloader
+INFO 2024-06-15 17:45:15,467 views Index page accessed
+INFO 2024-06-15 17:45:15,480 basehttp "GET / HTTP/1.1" 200 1067
+INFO 2024-06-15 17:45:18,079 views Index page accessed
+INFO 2024-06-15 17:45:18,083 basehttp "GET / HTTP/1.1" 200 1067
+INFO 2024-06-15 17:45:22,140 views About page accessed
+INFO 2024-06-15 17:45:22,143 basehttp "GET /about/ HTTP/1.1" 200 1172
+INFO 2024-06-15 17:45:33,962 views Index page accessed
+INFO 2024-06-15 17:45:33,965 basehttp "GET / HTTP/1.1" 200 1067
+INFO 2024-06-15 17:47:40,430 views Index page accessed
+INFO 2024-06-15 17:47:40,435 basehttp "GET / HTTP/1.1" 200 1066
+INFO 2024-06-15 17:48:32,433 views Index page accessed
+INFO 2024-06-15 17:48:32,438 basehttp "GET / HTTP/1.1" 200 1067
+INFO 2024-06-15 17:50:02,782 views Index page accessed
+INFO 2024-06-15 17:50:02,783 basehttp "GET / HTTP/1.1" 200 1067
+INFO 2024-06-15 17:54:45,628 autoreload Watching for file changes with StatReloader
+INFO 2024-06-15 17:54:50,214 views Index page accessed
+INFO 2024-06-15 17:54:50,228 basehttp "GET / HTTP/1.1" 200 1118
+WARNING 2024-06-15 17:54:50,585 log Not Found: /css/style.css
+WARNING 2024-06-15 17:54:50,587 basehttp "GET /css/style.css HTTP/1.1" 404 2447
+INFO 2024-06-15 17:55:06,058 views About page accessed
+INFO 2024-06-15 17:55:06,062 basehttp "GET /about/ HTTP/1.1" 200 1223
+WARNING 2024-06-15 17:55:06,113 log Not Found: /css/style.css
+WARNING 2024-06-15 17:55:06,114 basehttp "GET /css/style.css HTTP/1.1" 404 2447
+INFO 2024-06-15 17:55:08,395 views Index page accessed
+INFO 2024-06-15 17:55:08,398 basehttp "GET / HTTP/1.1" 200 1118
+WARNING 2024-06-15 17:55:08,451 log Not Found: /css/style.css
+WARNING 2024-06-15 17:55:08,458 basehttp "GET /css/style.css HTTP/1.1" 404 2447
+INFO 2024-06-15 17:56:11,453 autoreload Watching for file changes with StatReloader
+INFO 2024-06-15 17:56:13,210 views Index page accessed
+INFO 2024-06-15 17:56:13,222 basehttp "GET / HTTP/1.1" 200 1114
+WARNING 2024-06-15 17:56:13,294 log Not Found: /css/style.css
+WARNING 2024-06-15 17:56:13,296 basehttp "GET /css/style.css HTTP/1.1" 404 2447
+INFO 2024-06-15 17:56:41,069 views Index page accessed
+INFO 2024-06-15 17:56:41,073 basehttp "GET / HTTP/1.1" 200 1118
+WARNING 2024-06-15 17:56:41,122 log Not Found: /css/style.css
+WARNING 2024-06-15 17:56:41,123 basehttp "GET /css/style.css HTTP/1.1" 404 2447
+WARNING 2024-06-15 17:56:45,401 log Not Found: /css/style.css
+WARNING 2024-06-15 17:56:45,402 basehttp "GET /css/style.css HTTP/1.1" 404 2447
+INFO 2024-06-15 17:59:30,160 views Index page accessed
+INFO 2024-06-15 17:59:30,163 basehttp "GET / HTTP/1.1" 200 1107
+WARNING 2024-06-15 17:59:30,232 log Not Found: /css/style.css
+WARNING 2024-06-15 17:59:30,242 basehttp "GET /css/style.css HTTP/1.1" 404 2447
+INFO 2024-06-15 18:00:07,704 views Index page accessed
+INFO 2024-06-15 18:00:07,709 basehttp "GET / HTTP/1.1" 200 1125
+WARNING 2024-06-15 18:00:07,790 log Not Found: /css/style.css
+WARNING 2024-06-15 18:00:07,804 basehttp "GET /css/style.css HTTP/1.1" 404 2447

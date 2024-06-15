@@ -1,0 +1,27 @@
+Watching for file changes with StatReloader
+Error in about page: division by zero
+Traceback (most recent call last):
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\myapp\views.py", line 18, in about
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+"GET /about/ HTTP/1.1" 200 27
+Index page accessed
+"GET // HTTP/1.1" 200 13
+Index page accessed
+"GET / HTTP/1.1" 200 13
+C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\myproject1\settings.py changed, reloading.
+INFO 2024-06-14 03:07:08,998 autoreload 12184 13240 Watching for file changes with StatReloader
+INFO 2024-06-14 03:08:21,459 autoreload 12184 13240 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\myproject1\settings.py changed, reloading.
+INFO 2024-06-14 03:08:23,269 autoreload 7680 13204 Watching for file changes with StatReloader
+WARNING 2024-06-14 03:09:56,682 log 7680 9640 Not Found: /prefix/
+WARNING 2024-06-14 03:09:56,683 basehttp 7680 9640 "GET /prefix/ HTTP/1.1" 404 2430
+ERROR 2024-06-14 03:10:50,845 views 7680 9640 Error in about page: division by zero
+Traceback (most recent call last):
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\myapp\views.py", line 18, in about
+    result = 1 / 0
+             ~~^~~
+ZeroDivisionError: division by zero
+INFO 2024-06-14 03:10:50,849 basehttp 7680 9640 "GET /about/ HTTP/1.1" 200 27
+INFO 2024-06-14 03:10:57,824 views 7680 9640 Index page accessed
+INFO 2024-06-14 03:10:57,825 basehttp 7680 9640 "GET / HTTP/1.1" 200 13
