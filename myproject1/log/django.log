@@ -25,3 +25,6 @@ ZeroDivisionError: division by zero
 INFO 2024-06-14 03:10:50,849 basehttp 7680 9640 "GET /about/ HTTP/1.1" 200 27
 INFO 2024-06-14 03:10:57,824 views 7680 9640 Index page accessed
 INFO 2024-06-14 03:10:57,825 basehttp 7680 9640 "GET / HTTP/1.1" 200 13
+INFO 2024-06-15 21:52:08,714 autoreload 15996 12948 Watching for file changes with StatReloader
+INFO 2024-06-15 22:00:36,462 autoreload 16296 3392 Watching for file changes with StatReloader
+INFO 2024-06-15 22:27:40,890 autoreload 14780 4148 Watching for file changes with StatReloader

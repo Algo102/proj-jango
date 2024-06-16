@@ -198,3 +198,226 @@
 #         },
 #     },
 # }
+
+#########################################################################
+# СОЗДАНИЕ МОДЕЛИ
+# внутри приложения переходим в models.py
+# from django.db import models
+#
+#
+# class User(models.Model):  # id добавляется автоматически
+#     name = models.CharField(max_length=100)
+#     email = models.EmailField()
+#     password = models.CharField(max_length=100)
+#     age = models.IntegerField()
+#
+#
+# class Product(models.Model):
+#     name = models.CharField(max_length=100)
+#     price = models.DecimalField(max_digits=8, decimal_places=2)
+#     description = models.TextField()
+#     image = models.ImageField(upload_to='products/')
+#
+#
+# class Order(models.Model):
+#     customer = models.ForeignKey(User, on_delete=models.CASCADE)
+#     products = models.ManyToManyField(Product)
+#     date_ordered = models.DateTimeField(auto_now_add=True)
+#     total_price = models.DecimalField(max_digits=8, decimal_places=2)
+
+# Описание полей модели
+# Django предоставляет множество типов полей
+# ● CharField - поле для хранения строковых данных
+# ● EmailField - поле для хранения электронной почты
+# ● TextField - поле для хранения текстовых данных большой длины
+# ● IntegerField - поле для хранения целочисленных данных
+# ● DecimalField - поле для хранения десятичных чисел
+# ● FloatField - поле для хранения десятичных чисел, проблемы с точностью
+# ● BooleanField - поле для хранения логических значений (True/False)
+# ● DateTimeField - поле для хранения даты и времени
+# ● DateField - поле для хранения даты
+# ● TimeField - поле для хранения времени
+# ● ForeignKey - поле для связи с другой моделью. Один ко многим
+# ● ManyToManyField - поле для связи с другой моделью в отношении "многие-ко-многим"
+# ● ImageField - для работы с изображнием === pip install pillow
+# https://docs.djangoproject.com/en/4.2/ref/models/fields/#model-field-types
+
+
+# МИГРАЦИИ
+# если не указывать приложение, то зоздадутся миграции для всех приложений
+# python manage.py makemigrations lecapp2
+
+# применяем все накопленные миграции(появятся все таблицы)
+# python manage.py migrate
+
+
+# СОБСТВЕННЫЕ КОМАНДЫ
+# в приложении создаем пакет management
+# внутри него создаем пакет commands
+
+# внутри создаем файлы с командами my_command.py
+# в нем прописываем свою команду
+# from django.core.management.base import BaseCommand
+#
+#
+# class Command(BaseCommand):
+#     help = "Print 'Hello world!' to output."
+#
+#     def handle(self, *args, **kwargs):
+#         self.stdout.write('Hello world!')
+
+# затем в консоле можно запросить справку
+# python manage.py my_command -h
+
+# для вывода Hello world!
+# python manage.py my_command
+
+
+# создаем команду добавления пользователя create_user.py
+# from django.core.management.base import BaseCommand
+# from lecapp2.models import User
+#
+#
+# class Command(BaseCommand):
+#     help = "Create user."
+#
+#     def handle(self, *args, **kwargs):
+#         user = User(name='John', email='john@example.com', password='secret', age=25)
+#         ...
+#         user.save()
+#         self.stdout.write(f'{user}')
+#
+# python manage.py create_user
+
+# для лучшего представления при выводе в класс User в файле models добавляем
+# def __str__(self):
+#     return f'Username: {self.name}, email: {self.email}, age: {self.age}'
+
+
+# Получение объектов модели из базы данных, read. "all()" и "get()" и "filter()"
+# создаем файл get_all_users.py  - команда для вывода всех юзеров
+# from django.core.management.base import BaseCommand
+# from lecapp2.models import User
+#
+#
+# class Command(BaseCommand):
+#     help = "Get all users."
+#
+#     def handle(self, *args, **kwargs):
+#         users = User.objects.all()
+#         self.stdout.write(f'{users}')
+
+# создаем файл get_user.py - команда для вывода одного юзера
+# from django.core.management.base import BaseCommand
+# from lecapp2.models import User
+#
+#
+# class Command(BaseCommand):
+#     help = "Get user by id."
+#
+#     def add_arguments(self, parser):
+#         parser.add_argument('id', type=int, help='User ID')
+#
+#     def handle(self, *args, **kwargs):
+#         id = kwargs['id']
+#         user = User.objects.get(id=id)
+#         self.stdout.write(f'{user}')
+
+# python manage.py get_user 2
+
+# Для получения None, а не ошибок при поиске несуществующего пользователя
+# нужно использовать pk(первичный ключ) и filter вместо get
+# from django.core.management.base import BaseCommand
+# from lecapp2.models import User
+#
+#
+# class Command(BaseCommand):
+#     help = "Get user by id."
+#
+#     def add_arguments(self, parser):
+#         parser.add_argument('pk', type=int, help='User ID')
+#
+#     def handle(self, *args, **kwargs):
+#         pk = kwargs['pk']
+#         user = User.objects.filter(pk=pk).first()
+#         self.stdout.write(f'{user}')
+
+# метод filter()
+# Model.objects.filter(param__filter=value)
+# ● exact - точное совпадение значения поля
+# ● iexact - точное совпадение значения поля без учета регистра
+# ● contains - значение поля содержит заданный подстроку
+# ● icontains - значение поля содержит заданный подстроку без учета регистра
+# ● in - значение поля находится в заданном списке значений
+# ● gt - значение поля больше заданного значения
+# ● gte - значение поля больше или равно заданному значению
+# ● lt - значение поля меньше заданного значения
+# ● lte - значение поля меньше или равно заданному значению
+# ● startswith - значение поля начинается с заданной подстроки
+# ● istartswith - значение поля начинается с заданной подстроки без учета регистра
+# ● endswith - значение поля заканчивается на заданную подстроку
+# ● iendswith - значение поля заканчивается на заданную подстроку без учета регистра
+# ● range - значение поля находится в заданном диапазоне значений
+# ● date - значение поля является датой, соответствующей заданной дате
+# ● year - значение поля является годом, соответствующим заданному году
+
+
+# создаем файл get_user_age.py - команда для вывода юзеров с фильтрацией по году
+# from django.core.management.base import BaseCommand
+# from lecapp2.models import User
+#
+#
+# class Command(BaseCommand):
+#     help = "Get user with age greater <age>."
+#
+#     def add_arguments(self, parser):
+#         parser.add_argument('age', type=int, help='User age')
+#
+#     def handle(self, *args, **kwargs):
+#         age = kwargs['age']
+#         user = User.objects.filter(age__gt=age)
+#         self.stdout.write(f'{user}')
+
+
+# update_user.py Изменение объектов модели, update. get() или filter() в сочетании с save()
+# from django.core.management.base import BaseCommand
+# from lecapp2.models import User
+#
+#
+# class Command(BaseCommand):
+#     help = "Update user name by id."
+#
+#     def add_arguments(self, parser):
+#         parser.add_argument('pk', type=int, help='User ID')
+#         parser.add_argument('name', type=str, help='User name')
+#
+#     def handle(self, *args, **kwargs):
+#         pk = kwargs.get('pk')
+#         name = kwargs.get('name')
+#         user = User.objects.filter(pk=pk).first()
+#         user.name = name
+#         user.save()
+#         self.stdout.write(f'{user}')
+#
+# python manage.py update_user 2 Max
+
+
+# Удаление объектов модели, delete
+# from django.core.management.base import BaseCommand
+# from lecapp2.models import User
+#
+#
+# class Command(BaseCommand):
+#     help = "Delete user by id."
+#
+#     def add_arguments(self, parser):
+#         parser.add_argument('pk', type=int, help='User ID')
+#
+#     def handle(self, *args, **kwargs):
+#         pk = kwargs.get('pk')
+#         user = User.objects.filter(pk=pk).first()
+#         if user is not None:
+#             user.delete()
+#         self.stdout.write(f'{user}')
+
+
