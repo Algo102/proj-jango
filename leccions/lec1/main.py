@@ -1,4 +1,5 @@
-# python -m venv .venv
+# https://github.com/github/gitignore/blob/main/Python.gitignore
+# python -m venv .venv - СОЗДАНИЕ СРЕДЫ
 # .venv\Scripts\activate.ps1 для PWSH, если нет то, без .ps1
 # deactivate - дективировать виртуальну среду
 # pip list - посмотреть установленные зависимости в консоль
@@ -7,6 +8,7 @@
 
 # pip install django
 
+# СОЗДАЕМ ПРОЕКТ
 # django-admin startproject myproject1
 # появилась папка в которой есть
 # asgi - для взаимодействия с сихронным сервером
@@ -53,7 +55,8 @@
 #
 # def about(request):
 #     return HttpResponse("About us")
-#
+
+
 # По сложнее и с логером
 # import logging
 # from django.http import HttpResponse  # Класс для ответа от сервера к клиенту
