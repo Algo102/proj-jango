@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hw_app1',
+    'hw_app2',
 ]
 
 MIDDLEWARE = [
@@ -141,19 +142,33 @@ LOGGING = {
             "class": "logging.StreamHandler",
             "formatter": "verbose",
         },
-        "file": {
+        "file1": {
             "class": "logging.FileHandler",
-            "filename": "./log/django.log",
+            "filename": "./log/django1.log",
+            "formatter": "verbose",
+        },
+        "file2": {
+            "class": "logging.FileHandler",
+            "filename": "./log/django2.log",
             "formatter": "verbose",
         },
     },
     "loggers": {
-        "django": {
-            "handlers": ["console", "file"],
+        "django1": {
+            "handlers": ["console", "file1"],
+            "level": "INFO",
+        },
+        "django2": {
+            "handlers": ["console", "file2"],
             "level": "INFO",
         },
         "hw_app1": {
-            "handlers": ["console", "file"],
+            "handlers": ["console", "file1"],
+            "level": "DEBUG",
+            "propagate": True,
+        },
+        "hw_app2": {
+            "handlers": ["console", "file2"],
             "level": "DEBUG",
             "propagate": True,
         },
