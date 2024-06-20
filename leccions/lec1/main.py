@@ -271,6 +271,7 @@
 
 # затем в консоле можно запросить справку
 # python manage.py my_command -h
+# python manage.py help
 
 # для вывода Hello world!
 # python manage.py my_command
