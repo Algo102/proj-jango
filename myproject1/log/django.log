@@ -28,3 +28,240 @@ INFO 2024-06-14 03:10:57,825 basehttp 7680 9640 "GET / HTTP/1.1" 200 13
 INFO 2024-06-15 21:52:08,714 autoreload 15996 12948 Watching for file changes with StatReloader
 INFO 2024-06-15 22:00:36,462 autoreload 16296 3392 Watching for file changes with StatReloader
 INFO 2024-06-15 22:27:40,890 autoreload 14780 4148 Watching for file changes with StatReloader
+INFO 2024-06-19 17:43:03,600 autoreload 17588 19792 Watching for file changes with StatReloader
+INFO 2024-06-19 17:46:09,978 autoreload 1672 15624 Watching for file changes with StatReloader
+INFO 2024-06-19 17:48:18,912 autoreload 6956 21608 Watching for file changes with StatReloader
+INFO 2024-06-19 17:48:50,078 autoreload 22396 16304 Watching for file changes with StatReloader
+INFO 2024-06-19 17:48:58,174 autoreload 10828 5420 Watching for file changes with StatReloader
+INFO 2024-06-19 17:51:56,262 autoreload 15740 19240 Watching for file changes with StatReloader
+INFO 2024-06-19 17:57:23,911 autoreload 15624 1672 Watching for file changes with StatReloader
+INFO 2024-06-19 18:03:30,163 autoreload 14140 11148 Watching for file changes with StatReloader
+INFO 2024-06-19 18:05:34,342 autoreload 5628 5384 Watching for file changes with StatReloader
+INFO 2024-06-19 18:16:18,783 views 5628 5532 Index page accessed
+INFO 2024-06-19 18:16:18,817 basehttp 5628 5532 "GET / HTTP/1.1" 200 13
+INFO 2024-06-19 18:18:42,331 basehttp 5628 5532 "GET /lec3/hello HTTP/1.1" 301 0
+INFO 2024-06-19 18:18:42,338 basehttp 5628 20744 "GET /lec3/hello/ HTTP/1.1" 200 26
+INFO 2024-06-19 18:18:59,192 basehttp 5628 20744 "GET /lec3/hello2/ HTTP/1.1" 200 23
+INFO 2024-06-19 18:25:09,802 autoreload 5628 5384 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\urls.py changed, reloading.
+INFO 2024-06-19 18:25:11,229 autoreload 12104 22052 Watching for file changes with StatReloader
+INFO 2024-06-19 18:40:48,601 autoreload 20924 20712 Watching for file changes with StatReloader
+INFO 2024-06-19 18:43:07,438 autoreload 20924 20712 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 18:43:09,083 autoreload 15132 12716 Watching for file changes with StatReloader
+INFO 2024-06-19 18:43:42,583 autoreload 15132 12716 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 18:43:43,743 autoreload 18352 22468 Watching for file changes with StatReloader
+INFO 2024-06-19 18:44:04,716 basehttp 18352 19180 "GET /lec3/posts/2022 HTTP/1.1" 301 0
+INFO 2024-06-19 18:44:04,725 basehttp 18352 7068 "GET /lec3/posts/2022/ HTTP/1.1" 200 19
+INFO 2024-06-19 18:44:10,922 basehttp 18352 7068 "GET /lec3/posts/2022/12 HTTP/1.1" 301 0
+INFO 2024-06-19 18:44:10,931 basehttp 18352 1664 "GET /lec3/posts/2022/12/ HTTP/1.1" 200 26
+INFO 2024-06-19 18:45:13,182 autoreload 18352 22468 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 18:45:14,299 autoreload 10248 17660 Watching for file changes with StatReloader
+INFO 2024-06-19 18:45:14,640 basehttp 10248 22176 "GET /lec3/posts/2022/12/ HTTP/1.1" 200 22
+INFO 2024-06-19 18:45:43,500 basehttp 10248 22176 "GET /lec3/posts/2022/12/3 HTTP/1.1" 301 0
+INFO 2024-06-19 18:45:43,507 basehttp 10248 4280 "GET /lec3/posts/2022/12/3/ HTTP/1.1" 200 356
+INFO 2024-06-19 18:47:22,550 autoreload 10248 17660 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 18:47:23,605 autoreload 17072 8044 Watching for file changes with StatReloader
+INFO 2024-06-19 18:47:26,211 basehttp 17072 20872 "GET /lec3/posts/2022/12/ HTTP/1.1" 200 37
+INFO 2024-06-19 18:48:44,209 autoreload 17072 8044 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 18:48:45,563 autoreload 16056 17896 Watching for file changes with StatReloader
+INFO 2024-06-19 18:51:17,585 basehttp 16056 17196 "GET /lec3/posts/2022/12/python/ HTTP/1.1" 200 361
+INFO 2024-06-19 19:09:11,409 autoreload 16056 17896 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:09:12,918 autoreload 15504 22428 Watching for file changes with StatReloader
+INFO 2024-06-19 19:09:37,179 autoreload 15504 22428 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:09:38,228 autoreload 10824 16872 Watching for file changes with StatReloader
+INFO 2024-06-19 19:09:54,967 autoreload 10824 16872 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:09:56,027 autoreload 9900 21576 Watching for file changes with StatReloader
+INFO 2024-06-19 19:10:43,978 autoreload 9900 21576 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:10:45,161 autoreload 11144 22472 Watching for file changes with StatReloader
+INFO 2024-06-19 19:12:03,050 autoreload 11144 22472 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:12:04,202 autoreload 19212 18436 Watching for file changes with StatReloader
+INFO 2024-06-19 19:15:23,103 autoreload 19212 18436 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\urls.py changed, reloading.
+INFO 2024-06-19 19:15:24,529 autoreload 19372 22364 Watching for file changes with StatReloader
+INFO 2024-06-19 19:16:12,017 basehttp 19372 21204 "GET /lec3/ HTTP/1.1" 200 176
+INFO 2024-06-19 19:26:26,252 autoreload 19372 22364 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:26:27,269 autoreload 20348 19428 Watching for file changes with StatReloader
+INFO 2024-06-19 19:27:18,638 autoreload 20348 19428 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:27:20,230 autoreload 19296 17936 Watching for file changes with StatReloader
+INFO 2024-06-19 19:29:16,377 autoreload 19296 17936 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:29:18,287 autoreload 20192 12296 Watching for file changes with StatReloader
+INFO 2024-06-19 19:31:25,011 autoreload 20192 12296 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\urls.py changed, reloading.
+INFO 2024-06-19 19:31:26,411 autoreload 1288 21148 Watching for file changes with StatReloader
+INFO 2024-06-19 19:32:11,957 autoreload 1288 21148 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\urls.py changed, reloading.
+INFO 2024-06-19 19:32:13,247 autoreload 14992 19048 Watching for file changes with StatReloader
+INFO 2024-06-19 19:32:48,247 autoreload 14992 19048 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\urls.py changed, reloading.
+INFO 2024-06-19 19:32:49,520 autoreload 20544 22364 Watching for file changes with StatReloader
+INFO 2024-06-19 19:33:11,392 basehttp 20544 4148 "GET /lec3/if HTTP/1.1" 301 0
+INFO 2024-06-19 19:33:11,438 basehttp 20544 12744 "GET /lec3/if/ HTTP/1.1" 200 346
+INFO 2024-06-19 19:40:52,449 autoreload 20544 22364 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:40:53,483 autoreload 10344 19340 Watching for file changes with StatReloader
+INFO 2024-06-19 19:41:29,745 autoreload 10344 19340 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:41:31,228 autoreload 15644 21256 Watching for file changes with StatReloader
+INFO 2024-06-19 19:42:29,539 autoreload 15644 21256 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:42:31,134 autoreload 2548 16532 Watching for file changes with StatReloader
+INFO 2024-06-19 19:43:44,342 autoreload 2548 16532 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-19 19:43:45,508 autoreload 20684 11628 Watching for file changes with StatReloader
+INFO 2024-06-19 19:47:18,768 autoreload 20684 11628 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\urls.py changed, reloading.
+INFO 2024-06-19 19:47:20,374 autoreload 13096 17352 Watching for file changes with StatReloader
+INFO 2024-06-19 19:51:44,055 basehttp 13096 20028 "GET /lec3/for/ HTTP/1.1" 200 859
+WARNING 2024-06-19 20:57:05,724 log 13096 7276 Not Found: /favicon.ico
+WARNING 2024-06-19 20:57:05,733 basehttp 13096 7276 "GET /favicon.ico HTTP/1.1" 404 2547
+INFO 2024-06-20 00:02:29,151 basehttp 13096 6008 "GET /lec3/for/ HTTP/1.1" 200 859
+INFO 2024-06-20 00:19:54,173 autoreload 13096 17352 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-20 00:19:55,972 autoreload 15224 18736 Watching for file changes with StatReloader
+INFO 2024-06-20 00:21:33,214 autoreload 15224 18736 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py changed, reloading.
+INFO 2024-06-20 00:21:35,032 autoreload 18352 2224 Watching for file changes with StatReloader
+INFO 2024-06-20 00:23:23,301 autoreload 18352 2224 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\urls.py changed, reloading.
+INFO 2024-06-20 00:23:24,696 autoreload 15484 5808 Watching for file changes with StatReloader
+INFO 2024-06-20 00:24:10,721 basehttp 15484 8024 "GET /lec3/index HTTP/1.1" 301 0
+INFO 2024-06-20 00:24:10,735 basehttp 15484 20448 "GET /lec3/index/ HTTP/1.1" 200 226
+ERROR 2024-06-20 00:24:18,706 log 15484 20448 Internal Server Error: /lec3/about/
+Traceback (most recent call last):
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp3/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py", line 79, in about
+    return render(request, 'lecapp3/about.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp3/base.html
+ERROR 2024-06-20 00:24:18,717 basehttp 15484 20448 "GET /lec3/about/ HTTP/1.1" 500 136053
+ERROR 2024-06-20 00:24:52,504 log 15484 20448 Internal Server Error: /lec3/about/
+Traceback (most recent call last):
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\base.py", line 961, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\loader_tags.py", line 134, in render
+    compiled_parent = self.get_parent(context)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\loader_tags.py", line 131, in get_parent
+    return self.find_template(parent, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\loader_tags.py", line 109, in find_template
+    template, origin = context.template.engine.find_template(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\engine.py", line 163, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp3/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\views.py", line 79, in about
+    return render(request, 'lecapp3/about.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\.venv\Lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp3/base.html
+ERROR 2024-06-20 00:24:52,519 basehttp 15484 20448 "GET /lec3/about/ HTTP/1.1" 500 136190
+INFO 2024-06-20 00:25:43,535 autoreload 18664 16844 Watching for file changes with StatReloader
+INFO 2024-06-20 00:25:47,491 basehttp 18664 12608 "GET /lec3/about/ HTTP/1.1" 200 257
+INFO 2024-06-20 00:29:22,189 autoreload 18664 16844 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\myproject1\settings.py changed, reloading.
+INFO 2024-06-20 00:29:23,999 autoreload 18200 16436 Watching for file changes with StatReloader
+INFO 2024-06-20 00:35:49,612 basehttp 18200 6184 "GET /lec3/about/ HTTP/1.1" 200 257
+INFO 2024-06-20 00:36:00,090 basehttp 18200 6184 "GET /lec3/index/ HTTP/1.1" 200 286
+INFO 2024-06-20 01:24:30,593 autoreload 18200 16436 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\myproject1\urls.py changed, reloading.
+INFO 2024-06-20 01:24:32,617 autoreload 3180 7704 Watching for file changes with StatReloader
+INFO 2024-06-20 01:25:26,730 basehttp 3180 19104 "GET /lec3/index/ HTTP/1.1" 200 286
+WARNING 2024-06-20 01:25:34,535 log 3180 19104 Not Found: /index
+WARNING 2024-06-20 01:25:34,536 basehttp 3180 19104 "GET /index HTTP/1.1" 404 2629
+INFO 2024-06-20 01:25:44,081 views 3180 19104 Index page accessed
+INFO 2024-06-20 01:25:44,082 basehttp 3180 19104 "GET / HTTP/1.1" 200 13
+INFO 2024-06-20 01:26:12,494 autoreload 3180 7704 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\myproject1\urls.py changed, reloading.
+INFO 2024-06-20 01:26:13,707 autoreload 3248 19048 Watching for file changes with StatReloader
+INFO 2024-06-20 01:26:14,015 basehttp 3248 16812 "GET / HTTP/1.1" 200 286
+INFO 2024-06-20 01:31:36,716 autoreload 3248 19048 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\models.py changed, reloading.
+INFO 2024-06-20 01:31:38,580 autoreload 18960 4704 Watching for file changes with StatReloader
+INFO 2024-06-20 01:33:46,488 autoreload 18960 4704 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp3\models.py changed, reloading.
+INFO 2024-06-20 02:34:23,447 autoreload 8484 10388 Watching for file changes with StatReloader
+WARNING 2024-06-20 02:34:49,358 log 8484 13104 Not Found: /author/4
+WARNING 2024-06-20 02:34:49,358 basehttp 8484 13104 "GET /author/4 HTTP/1.1" 404 2310
+INFO 2024-06-20 02:35:01,593 basehttp 8484 13104 "GET /lec3/author/4 HTTP/1.1" 301 0
+INFO 2024-06-20 02:35:01,619 basehttp 8484 20904 "GET /lec3/author/4/ HTTP/1.1" 200 1387
+INFO 2024-06-20 02:35:29,143 basehttp 8484 20904 "GET /lec3/post/20/ HTTP/1.1" 200 717
+INFO 2024-06-20 02:35:33,145 basehttp 8484 20904 "GET /lec3/post/16/ HTTP/1.1" 200 703
+INFO 2024-06-22 21:14:43,848 autoreload 17532 19068 Watching for file changes with StatReloader
+INFO 2024-06-22 21:17:51,244 autoreload 17532 19068 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\lecapp4\views.py changed, reloading.
+INFO 2024-06-22 21:17:52,501 autoreload 16516 5048 Watching for file changes with StatReloader
+INFO 2024-06-22 21:18:09,627 autoreload 360 20864 Watching for file changes with StatReloader
+INFO 2024-06-22 21:18:12,724 basehttp 360 9240 "GET / HTTP/1.1" 200 286
+WARNING 2024-06-22 21:18:44,587 log 360 9240 Not Found: /lec4
+WARNING 2024-06-22 21:18:44,588 basehttp 360 9240 "GET /lec4 HTTP/1.1" 404 2403
+INFO 2024-06-22 21:19:21,519 basehttp 360 9240 "GET /lec4/user/add/ HTTP/1.1" 200 825
+INFO 2024-06-22 21:19:37,813 basehttp 360 9240 "POST /lec4/user/add/ HTTP/1.1" 200 880
+INFO 2024-06-22 21:19:40,859 basehttp 360 9240 "POST /lec4/user/add/ HTTP/1.1" 200 880
+INFO 2024-06-22 21:25:42,893 basehttp 360 15104 "POST /lec4/user/add/ HTTP/1.1" 200 880
+INFO 2024-06-22 21:28:23,656 autoreload 360 20864 C:\Users\Algor\Desktop\GB\Фреймворк Django\proj_django\myproject1\myproject1\settings.py changed, reloading.

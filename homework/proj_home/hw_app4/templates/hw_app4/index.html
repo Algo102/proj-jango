@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+    {{ title }} 
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <ul>
+        <li><a href='{% url "all_orders" %}'>Все заказы</a></li>
+        <li><a href='{% url "add_client" %}'>Новый клиента</a></li>
+        <li><a href='{% url "add_product" %}'>Новый товар</a></li>
+        <li><a href='{% url "add_order" %}'>Новый заказ</a></li>
+        </ul>
+    </div>
+
+{% endblock %}

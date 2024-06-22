@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from lecapp3.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myapp.urls')),
+    # path('', include('myapp.urls')),
     # path('prefix/', include('myapp.urls')),
+    path('lec3/', include('lecapp3.urls')),
+    path('', index),
+    path('lec4/', include('lecapp4.urls')),
 ]

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} 
+    {{ result }}
+{% endblock %}
+
+{% block header %}
+    {{ Результат }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <p class="result-text"> Игра {{ event_type }}</p>
+        <h1>Результат игры</h1>
+        {% for el in content  %}
+            {{ el }}
+        {% endfor %}
+    </div>
+
+{% endblock %}

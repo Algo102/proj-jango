@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #AFEEEE;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #6A5ACD;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: red;
+}
+
+/* Для фото */
+.float-right {
+    float: right;
+    margin: 1px;
+    width: 100px;
+    height: auto;
+}
+
+.result-text {
+    font-size: 20px;
+    color: #0000FF;
+    font-weight: bold;
+}
+
+.fixed-bottom {
+    z-index: -1;
+}

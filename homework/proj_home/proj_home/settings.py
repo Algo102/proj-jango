@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hw_app1',
     'hw_app2',
+    'hw_app3',
+    'hw_app4',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +61,9 @@ ROOT_URLCONF = 'proj_home.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,8 +123,16 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+   ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -152,6 +164,16 @@ LOGGING = {
             "filename": "./log/django2.log",
             "formatter": "verbose",
         },
+        "file3": {
+            "class": "logging.FileHandler",
+            "filename": "./log/django3.log",
+            "formatter": "verbose",
+        },
+        "file4": {
+            "class": "logging.FileHandler",
+            "filename": "./log/django4.log",
+            "formatter": "verbose",
+        },
     },
     "loggers": {
         "django1": {
@@ -162,6 +184,14 @@ LOGGING = {
             "handlers": ["console", "file2"],
             "level": "INFO",
         },
+        "django3": {
+            "handlers": ["console", "file3"],
+            "level": "INFO",
+        },
+        "django4": {
+            "handlers": ["console", "file4"],
+            "level": "INFO",
+        },
         "hw_app1": {
             "handlers": ["console", "file1"],
             "level": "DEBUG",
@@ -169,6 +199,16 @@ LOGGING = {
         },
         "hw_app2": {
             "handlers": ["console", "file2"],
+            "level": "DEBUG",
+            "propagate": True,
+        },
+        "hw_app3": {
+            "handlers": ["console", "file3"],
+            "level": "DEBUG",
+            "propagate": True,
+        },
+        "hw_app4": {
+            "handlers": ["console", "file4"],
             "level": "DEBUG",
             "propagate": True,
         },

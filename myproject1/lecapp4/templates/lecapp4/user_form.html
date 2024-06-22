@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>{{ message }}</h3>
+<form action="" method="post">
+    {% csrf_token %}
+<!--    {{ form }}-->
+<!--    {{ form.as_p }}  as_p выводим как отдельные абзацы-->
+<!--    {{ form.as_div }}  as_div выводим как отлельные блоки-->
+    {{ form.as_div }}
+    <input type="submit" value="Отправить">
+</form>
+{% endblock %}

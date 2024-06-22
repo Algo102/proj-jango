@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'lecapp2',
+    'lecapp3',
+    'lecapp4',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +61,9 @@ ROOT_URLCONF = 'myproject1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,6 +126,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -144,19 +151,33 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'verbose'
         },
-        'file': {
+        'file1': {
             'class': 'logging.FileHandler',
-            'filename': './log/django.log',
+            'filename': './log/django1.log',
+            'formatter': 'verbose'
+        },
+        'file2': {
+            'class': 'logging.FileHandler',
+            'filename': './log/django2.log',
             'formatter': 'verbose'
         },
     },
     'loggers': {
-        'django': {
-            'handlers': ['console', 'file'],
+        'django1': {
+            'handlers': ['console', 'file1'],
+            'level': 'INFO',
+        },
+        'django2': {
+            'handlers': ['console', 'file2'],
             'level': 'INFO',
         },
         'myapp': {
-            'handlers': ['console', 'file'],
+            'handlers': ['console', 'file1'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'lecapp4': {
+            'handlers': ['console', 'file2'],
             'level': 'DEBUG',
             'propagate': True,
         },
