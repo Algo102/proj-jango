@@ -5,7 +5,8 @@
 # pip list - посмотреть установленные зависимости в консоль
 # pip freeze - посмотреть установленные зависимости в др. поток вывода
 # pip freeze > requirements.txt - сохранить установленные зависимости
-
+# pip install -r requirements.txt - развернуть библиотеки
+# pip install pillow - для работы с картинками в моделях
 # pip install django
 
 # СОЗДАЕМ ПРОЕКТ
@@ -81,6 +82,70 @@
 #         return HttpResponse("This is the about page.")
 
 
+# View c без класса и с классом, с выводом Json и передачей параметров в адресной строке
+# from django.http import HttpResponse, JsonResponse
+# from django.views import View
+#
+#
+# def hello(request):
+#     return HttpResponse("Hello World from function!")
+#
+#
+# class HelloView(View):
+#     def get(self, request):
+#         return HttpResponse("Hello World from class!")
+#
+#
+# def year_post(request, year):
+#     text = ""
+#     ...  # формируем статьи за год
+#     return HttpResponse(f"Posts from {year}<br>{text}")
+#
+#
+# class MonthPost(View):
+#     def get(self, request, year, month):
+#         text = "hhjknkjng,hghvh"
+#         ...  # формируем статьи за год и месяц
+#         return HttpResponse(f"Posts from {month}/{year}<br>{text}")
+#
+#
+# def post_detail(request, year, month, slug):
+#     ...  # Формируем статьи за год и месяц по идентификатору. Пока обойдёмся без запросов к базе данных
+#     post = {
+#         "year": year,
+#         "month": month,
+#         "slug": slug,
+#         "title": "Кто быстрее создаёт списки в Python, list() или []",
+#         "content": "В процессе написания очередной программы задумался над тем, "
+#                    "какой способ создания списков в Python работает быстрее..."
+#     }
+#     return JsonResponse(post, json_dumps_params={'ensure_ascii': False})
+
+
+# в такм случае urls для приложения прописывается так
+# from django.urls import path
+# from .views import hello, HelloView
+# from .views import year_post, MonthPost, post_detail
+#
+# urlpatterns = [
+#     path('hello/', hello, name='hello'),
+#     path('hello2/', HelloView.as_view(), name='hello2'),
+# path('posts/<int:year>/', year_post, name='year_post'),
+# path('posts/<int:year>/<int:month>/', MonthPost.as_view(), name='month_post'),
+# path('posts/<int:year>/<int:month>/<slug:slug>/', post_detail, name='post_detail'),
+# ]
+
+# Типы данных для адресной строки
+# 💡 str — приставка для передачи строки любых символов, кроме слэша.
+# 💡 int — приставка для передачи целого числа.
+# 💡 slug — приставка для передачи строки, содержащей только буквы, цифры,
+# дефисы и знаки подчеркивания.
+# 💡 uuid — приставка для передачи уникального идентификатора.
+# 💡 path — приставка для передачи строки любых символов, включая слэши.
+
+
+
+
 # Настройка путей:
 # Открываем urls.py в корневой директории проекта, если несколько программ
 # from django.contrib import admin
@@ -90,6 +155,7 @@
 #     path('admin/', admin.site.urls),
 #     path('', include('sem1app.urls')),
 #     path('', include('sem1app2.urls')),
+#     path('', include('lecapp3.urls')),
 # ]
 
 # соединяем маршруты и представления
@@ -425,3 +491,112 @@
 #         self.stdout.write(f'{user}')
 
 
+# ШАБЛОНЫ
+# файл view
+# from django.shortcuts import render
+# from django.views.generic import TemplateView  # представления на основе класса для шаблонов
+#
+#
+# def my_view(request):
+#     context = {"name": "John"}
+#     return render(request, "lecapp3/my_template.html", context)
+#
+#
+# class TemplIf(TemplateView):
+#     template_name = "lecapp3/templ_if.html"
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['message'] = "Привет, мир!"
+#         context['number'] = 5
+#         return context
+#
+#
+# def view_for(request):
+#     my_list = ['apple', 'banana', 'orange']
+#     my_dict = {
+#         'каждый': 'красный',
+#         'охотник': 'оранжевый',
+#         'желает': 'жёлтый',
+#         'знать': 'зелёный',
+#         'где': 'голубой',
+#         'сидит': 'синий',
+#         'фазан': 'фиолетовый',
+#     }
+#     context = {'my_list': my_list, 'my_dict': my_dict}
+#     return render(request, 'lecapp3/templ_for.html', context)
+
+
+# urls приложения
+# from django.urls import path
+# from .views import TemplIf, my_view, view_for
+#
+#
+# urlpatterns = [
+#     path('', my_view, name='index'),
+#     path('if/', TemplIf.as_view(), name='templ_if'),
+#     path('for/', view_for, name='templ_for'),
+# ]
+
+
+# файл my_template.html
+# <!DOCTYPE html>
+# <html lang="ru">
+# <head>
+#     <meta charset="UTF-8">
+#     <title>Первый шаблон Django</title>
+# </head>
+# <body>
+#     <h1>Hello, {{ name }}!</h1>
+# </body>
+# </html>
+
+
+# файл templ_if.html
+# <!DOCTYPE html>
+# <html lang="ru">
+# <head>
+#     <meta charset="UTF-8">
+#     <title>Шаблон с ветвлением</title>
+# </head>
+# <body>
+#     {% if message %}
+#         <p>Вам доступно сообщение: <br> {{ message }}</p>
+#     {% endif %}
+#
+#     <p>К прочтению предлагается {{ number }}
+#     {% if number == 1 %}
+#     пост
+#     {% elif number >= 2 and number <= 4 %}
+#         поста
+#     {% else %}
+#         постов
+#     {% endif %}
+#     </p>
+# </body>
+# </html>
+
+
+# файл templ_for.html
+# <!DOCTYPE html>
+# <html lang="ru">
+# <head>
+#     <meta charset="UTF-8">
+#     <title>Шаблон с ветвлением</title>
+# </head>
+# <body>
+#     <h2>Элементы списка</h2>
+#     <ul>
+#     {% for item in my_list %}
+#         <li>{{ item }}</li>
+#     {% endfor %}
+#     </ul>
+#
+#     <h2>Ключи и значения словаря</h2>
+#     <table>
+#     {% for key, value in my_dict.items %}
+#         <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
+#     {% endfor %}
+#     </table>
+# </body>
+# </html>

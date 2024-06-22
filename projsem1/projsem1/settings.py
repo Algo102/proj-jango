@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'sem1app',
     'sem1app2',
     'sem2app1',
+    'sem3app1',
+    'sem4app1',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +62,9 @@ ROOT_URLCONF = 'projsem1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

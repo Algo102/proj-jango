@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} 
+    Выберите событие
+{%endblock %}
+
+{% block header %}
+    Выберите событие и количество попыток
+{% endblock %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <input type="submit" value="Отправить">
+    </form>
+
+{% endblock %}
