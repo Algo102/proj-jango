@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hw_app1',
     'hw_app2',
+    'hw_app3',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,9 @@ ROOT_URLCONF = 'proj_home.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -152,6 +155,11 @@ LOGGING = {
             "filename": "./log/django2.log",
             "formatter": "verbose",
         },
+        "file3": {
+            "class": "logging.FileHandler",
+            "filename": "./log/django3.log",
+            "formatter": "verbose",
+        },
     },
     "loggers": {
         "django1": {
@@ -162,6 +170,10 @@ LOGGING = {
             "handlers": ["console", "file2"],
             "level": "INFO",
         },
+        "django3": {
+            "handlers": ["console", "file3"],
+            "level": "INFO",
+        },
         "hw_app1": {
             "handlers": ["console", "file1"],
             "level": "DEBUG",
@@ -169,6 +181,11 @@ LOGGING = {
         },
         "hw_app2": {
             "handlers": ["console", "file2"],
+            "level": "DEBUG",
+            "propagate": True,
+        },
+        "hw_app3": {
+            "handlers": ["console", "file3"],
             "level": "DEBUG",
             "propagate": True,
         },
