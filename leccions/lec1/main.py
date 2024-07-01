@@ -600,3 +600,197 @@
 #     </table>
 # </body>
 # </html>
+
+#######################################################################################
+# НАСТРОЙКА АДМИНКИ
+
+# в settings вносим
+# LANGUAGE_CODE = 'ru-ru'
+
+# заведение админа
+# python manage.py createsuperuser
+
+# изменение пароля
+# python manage.py changepassword <username>
+
+# в БД auth_user появился пользователь
+
+# в админке создаем пользователя с правами, добавляем в желаемы группы
+
+# в settings можно отключить хеширование пароля и защищенную сессию в пост запросах
+# MIDDLEWARE = [
+#     'django.middleware.security.SecurityMiddleware',
+#     'django.middleware.csrf.CsrfViewMiddleware',
+# ]
+
+
+# создаем модель в нужном приложении
+# from django.db import models
+#
+#
+# class Category(models.Model):
+#     name = models.CharField(max_length=50, unique=True)
+#
+#     def __str__(self):
+#         return self.name
+#
+#
+# class Product(models.Model):
+#     name = models.CharField(max_length=50)
+#     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+#
+#     def __str__(self):
+#         return self.name
+
+# Делаем и применяем миграции
+# py manage.py makemigrations lecapp5
+# py manage.py migrate
+
+# в БД можем посмотреть и категории и продукты
+
+# добавляем модели к админке
+# в приложении в admin.py добавляем
+# from django.contrib import admin
+# from .models import Category, Product
+#
+# admin.site.register(Category)
+# admin.site.register(Product)
+
+# Так как админка одна на все приложения, можно добавить
+# модели и в других приложениях
+# from django.contrib import admin
+# from .models import Author, Post
+#
+# admin.site.register(Author)
+# admin.site.register(Post)
+
+# # Запись проще, когда много модулей
+# myModels = [Author, Post]
+# admin.site.register(myModels)
+# или так
+# admin.site.register([Author, Post])
+
+# При создании класса для изменения представления в админке
+# @admin.register(Article)
+# class ArticleAdmin(admin.ModelAdmin):
+#     list_display = ('title', 'text', 'pub_date', 'author', 'category', 'views', 'is_published')
+#     readonly_fields = ['pub_date']
+# # Вместо
+# # admin.site.register(Article, ArticleAdmin)
+# # написали
+# # @admin.register(Article)
+
+
+# Теперь через админку можно добавлять категории и продукты
+
+# если не хватает полей в продуктах можно внести изменение в модель
+# default - обязательное поле. Тут в дате не указали, но при миграции попросит изменить или принять текущее
+# class Product(models.Model):
+#     name = models.CharField(max_length=50)
+#     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+#     description = models.TextField(default='', blank=True)  # по умолчанию пусто и поле НЕ обязательное
+#     price = models.DecimalField(default=999999.99, max_digits=8, decimal_places=2)  # DecimalField для точности, а не Float
+#     quantity = models.PositiveSmallIntegerField(default=0)  # Положительное, пару байт, целое
+#     date_added = models.DateTimeField(auto_now_add=True)  # Автоматическая подстановка времени сервера
+#     rating = models.DecimalField(default=5.0, max_digits=3, decimal_places=2)
+#
+#     def __str__(self):
+#         return self.name
+#
+#     # Менаяем название на русский язык
+#     class Meta:
+#         verbose_name = "Продукт"
+#         verbose_name_plural = "Продукты"
+
+# py manage.py makemigrations lecapp5
+# py manage.py migrate
+
+
+# Доработка админки
+# from .models import Category, Product
+#
+#
+# # Добавляем действия, к примеру, возможности внесения изменения
+# @admin.action(description="Сбросить количество в ноль")
+# def reset_quantity(modeladmin, request, queryset):
+#     queryset.update(quantity=0)
+#
+#
+# изменем работу с продуктами в админке, добавляем категорию и количество
+# class ProductAdmin(admin.ModelAdmin):
+#     list_display = ['name', 'category', 'quantity']
+#     ordering = ['category', '-quantity']  # можно добавить для сортировки. "-" для убывания
+#     list_filter = ['date_added', 'price']  # добавляется возможность фильтрования по дате
+#     search_fields = ['description']  # поиск по описанию, можно включить больше полей
+#     search_help_text = 'Поиск по полю Описание продукта'  # подсказка
+#     actions = [reset_quantity]  # дописываем после того как добавили функцию сброса
+#
+#     """Добавление и изменение отображение полей"""
+# #    fields = ['name', 'description', 'category', 'date_added', 'rating']  # добавили дату
+#     readonly_fields = ['date_added', 'rating']  # Дату и рейтинг изменить нельзя
+
+# Персонализированная настройка представления продукта в админке
+    # fieldsets не дружит с fields, поэтому комментируем
+    # fieldsets = [
+    #     (
+    #         None,
+    #         {
+    #             'classes': ['wide'],  # максимально широко в панели
+    #             'fields': ['name'],
+    #         },
+    #     ),
+    #     (
+    #         'Подробности',
+    #         {
+    #             'classes': ['collapse'],  # изночально поле свернуто
+    #             'description': 'Категория товара и его подробное описание',
+    #             'fields': ['category', 'description'],
+    #         },
+    #     ),
+    #     (
+    #         'Бухгалтерия',
+    #         {
+    #             'fields': ['price', 'quantity'],
+    #         }
+    #     ),
+    #     (
+    #         'Рейтинг и прочее',
+    #         {
+    #             'description': 'Рейтинг сформирован автоматически на основе оценок покупателей',
+    #             'fields': ['rating', 'date_added'],
+    #         }
+    #     ),
+    # ]
+#
+#
+# admin.site.register(Category)
+# admin.site.register(Product, ProductAdmin)
+
+
+# Для сохранения в csv файле, подключаем к классу actions
+# @admin.register(Article)
+# class ArticleAdmin(admin.ModelAdmin, ExportAsCSVMixin):
+#     list_display = ('title', 'text', 'pub_date', 'author', 'category', 'views', 'is_published')
+#     readonly_fields = ['pub_date']
+#     actions = ['export_as_csv']
+#
+# import csv
+# from django.db.models.options import Options
+# from django.http import HttpResponse
+#
+#
+# class ExportAsCSVMixin(object):
+#     def export_as_csv(self, request, queryset):
+#         meta: Options = self.model._meta
+#         field_names = [field.name for field in meta.fields]
+#         response = HttpResponse(content_type='text/csv; charset=windows-1251')
+#         response['Content-Disposition'] = 'attachment; filename={}--export.csv'.format(meta)
+# #        writer = csv.writer(response)
+#         writer = csv.writer(response, dialect="excel-tab", quoting=csv.QUOTE_NONNUMERIC)  # так лучше
+#         writer.writerow(field_names)
+#         for obj in queryset:
+#             writer.writerow([getattr(obj, field) for field in field_names])
+#         return response
+#
+#     export_as_csv.short_description = 'Export as CSV'
+

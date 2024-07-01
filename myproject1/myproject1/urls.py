@@ -21,8 +21,9 @@ from lecapp3.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('myapp.urls')),
-    # path('prefix/', include('myapp.urls')),
+    path('prefix/', include('myapp.urls')),
     path('lec3/', include('lecapp3.urls')),
     path('', index),
     path('lec4/', include('lecapp4.urls')),
+    # path('lec5/', include('lecapp5.urls')),
 ]
